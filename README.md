@@ -5,3 +5,4 @@ This web application serves as a comprehensive tool for monitoring cattle sheds 
 1. Node.js [Express Frame work] along with Typescript
 2. MongoDB [ using mongoose ]
 3. React [ Redux tool kit, React hooks] along with Typescript
+4. Material UI for styling
