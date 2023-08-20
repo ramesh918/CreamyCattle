@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-08-20T05:29:52.116Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="Jf4pFk8Nd5pOK2rat8h8" version="21.6.8" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2023-08-20T11:11:31.021Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="L-6Hl_GVSVv8gRxj8I6k" version="21.6.8" type="github" pages="2">
   <diagram name="HLD" id="lwee_DpMBSLP7jrXsPZq">
-    <mxGraphModel dx="794" dy="456" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1034" dy="456" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -12,7 +12,7 @@
         <mxCell id="VSvQy5dFLlS-B9iUsLbJ-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;strokeColor=#FF6392;fontColor=#5AA9E6;fillColor=#FFE45E;" edge="1" parent="VSvQy5dFLlS-B9iUsLbJ-1" source="VSvQy5dFLlS-B9iUsLbJ-2" target="VSvQy5dFLlS-B9iUsLbJ-3">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="VSvQy5dFLlS-B9iUsLbJ-2" value="web Applicaton" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;strokeColor=#FF6392;fontColor=#5AA9E6;fillColor=#FFE45E;" vertex="1" parent="VSvQy5dFLlS-B9iUsLbJ-1">
+        <mxCell id="VSvQy5dFLlS-B9iUsLbJ-2" value="UI" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;strokeColor=#FF6392;fontColor=#5AA9E6;fillColor=#FFE45E;" vertex="1" parent="VSvQy5dFLlS-B9iUsLbJ-1">
           <mxGeometry x="20" y="150" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="VSvQy5dFLlS-B9iUsLbJ-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#FF6392;fontColor=#5AA9E6;fillColor=#FFE45E;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="VSvQy5dFLlS-B9iUsLbJ-1" source="hWdLBgMQMnGxIaRK6Ltx-3" target="VSvQy5dFLlS-B9iUsLbJ-4">
@@ -48,11 +48,14 @@
         <mxCell id="6TBo3ajaVwH72sm0Jn_y-1" value="File System" style="whiteSpace=wrap;html=1;aspect=fixed;strokeColor=#FF6392;fontColor=#5AA9E6;fillColor=#FFE45E;" vertex="1" parent="VSvQy5dFLlS-B9iUsLbJ-1">
           <mxGeometry x="470" y="260" width="80" height="80" as="geometry" />
         </mxCell>
+        <mxCell id="CcAl-80mWUti8i8dRuFT-1" value="Frontend&lt;br&gt;Backend&lt;br&gt;UI/UX&lt;br&gt;Design" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#5AA9E6;" vertex="1" parent="VSvQy5dFLlS-B9iUsLbJ-1">
+          <mxGeometry x="30" y="280" width="100" height="60" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
   <diagram id="RTZchIBD0rqj3JDzW0TW" name="LLD">
-    <mxGraphModel dx="794" dy="456" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="934" dy="418" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -76,7 +79,7 @@
         <mxCell id="7wkqDqcYeYB7PeSTV6t_-4" value="HTTP/HTTPS" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#FF6392;fontColor=#5AA9E6;fillColor=#FFE45E;" vertex="1" parent="GIV4ogAcHvEZMnjFFi9--1">
           <mxGeometry x="130" y="40" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="7wkqDqcYeYB7PeSTV6t_-6" value="postgresql" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;strokeColor=#FF6392;fontColor=#5AA9E6;fillColor=#FFE45E;" vertex="1" parent="GIV4ogAcHvEZMnjFFi9--1">
+        <mxCell id="7wkqDqcYeYB7PeSTV6t_-6" value="postgresql/mysql" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;strokeColor=#FF6392;fontColor=#5AA9E6;fillColor=#FFE45E;" vertex="1" parent="GIV4ogAcHvEZMnjFFi9--1">
           <mxGeometry x="490" y="160" width="140" height="130" as="geometry" />
         </mxCell>
         <mxCell id="7wkqDqcYeYB7PeSTV6t_-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;strokeColor=#FF6392;fontColor=#5AA9E6;fillColor=#FFE45E;" edge="1" parent="GIV4ogAcHvEZMnjFFi9--1" source="7wkqDqcYeYB7PeSTV6t_-2" target="7wkqDqcYeYB7PeSTV6t_-6">
@@ -89,6 +92,9 @@
         </mxCell>
         <mxCell id="7wkqDqcYeYB7PeSTV6t_-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.478;entryY=-0.1;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=#FF6392;fontColor=#5AA9E6;fillColor=#FFE45E;" edge="1" parent="GIV4ogAcHvEZMnjFFi9--1" source="7wkqDqcYeYB7PeSTV6t_-1" target="7wkqDqcYeYB7PeSTV6t_-7">
           <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0DjkLb_tjyWJbjVkDkco-1" value="postaman/insomenia" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#FF6392;fontColor=#5AA9E6;fillColor=#FFE45E;" vertex="1" parent="GIV4ogAcHvEZMnjFFi9--1">
+          <mxGeometry y="160" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
