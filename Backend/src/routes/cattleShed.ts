@@ -86,7 +86,7 @@ router.post('/', validateRequest(cattleShedValidationSchema, "body"), authentica
  *             example:
  *               error: Error fetching cattle sheds
  */
-router.get('/', getAllCattleSheds);
+router.get('/', authenticateToken, getAllCattleSheds);
 
 /**
  * @swagger
@@ -128,7 +128,7 @@ router.get('/', getAllCattleSheds);
  *             example:
  *               error: Error fetching cattle shed
  */
-router.get('/:id', getCattleShedById);
+router.get('/:id', authenticateToken, getCattleShedById);
 
 /**
  * @swagger
@@ -176,7 +176,7 @@ router.get('/:id', getCattleShedById);
  *             example:
  *               error: Error updating cattle shed
  */
-router.put('/:id', updateCattleShedById);
+router.put('/:id', authenticateToken,updateCattleShedById);
 
 /**
  * @swagger
@@ -218,6 +218,6 @@ router.put('/:id', updateCattleShedById);
  *             example:
  *               error: Error deleting cattle shed
  */
-router.delete('/:id', deleteCattleShedById);
+router.delete('/:id', authenticateToken, deleteCattleShedById);
 
 export default router;
