@@ -12,15 +12,6 @@ import { animalValidationSchema } from '../validations/animal/animal.validation'
 
 const router = express.Router();
 
-// Use authentication middleware
-router.use(authenticateToken);
-
-/**
- * @swagger
- * tags:
- *   name: Animals
- *   description: Animal operations
- */
 
 /**
  * @swagger
@@ -31,7 +22,7 @@ router.use(authenticateToken);
  *       - Animals
  *     parameters:
  *       - in: header
- *         name: authorization
+ *         name: auth
  *         schema:
  *           type: string
  *         required: true
@@ -62,7 +53,7 @@ router.use(authenticateToken);
  *             example:
  *               error: Error creating animal
  */
-router.post('/', validateRequest(animalValidationSchema, 'body'), createAnimal);
+router.post('/', validateRequest(animalValidationSchema, 'body'), authenticateToken, createAnimal);
 
 /**
  * @swagger
@@ -73,7 +64,7 @@ router.post('/', validateRequest(animalValidationSchema, 'body'), createAnimal);
  *       - Animals
  *     parameters:
  *       - in: header
- *         name: authorization
+ *         name: auth
  *         schema:
  *           type: string
  *         required: true
@@ -94,7 +85,7 @@ router.post('/', validateRequest(animalValidationSchema, 'body'), createAnimal);
  *             example:
  *               error: Error fetching animals
  */
-router.get('/', getAllAnimals);
+router.get('/', authenticateToken, getAllAnimals);
 
 /**
  * @swagger
@@ -111,7 +102,7 @@ router.get('/', getAllAnimals);
  *         required: true
  *         description: Animal ID
  *       - in: header
- *         name: authorization
+ *         name: auth
  *         schema:
  *           type: string
  *         required: true
@@ -136,7 +127,7 @@ router.get('/', getAllAnimals);
  *             example:
  *               error: Error fetching animal
  */
-router.get('/:id', getAnimalById);
+router.get('/:id',authenticateToken, getAnimalById);
 
 /**
  * @swagger
@@ -153,7 +144,7 @@ router.get('/:id', getAnimalById);
  *         required: true
  *         description: Animal ID
  *       - in: header
- *         name: authorization
+ *         name: auth
  *         schema:
  *           type: string
  *         required: true
@@ -184,7 +175,7 @@ router.get('/:id', getAnimalById);
  *             example:
  *               error: Error updating animal
  */
-router.put('/:id', validateRequest(animalValidationSchema, 'body'), updateAnimalById);
+router.put('/:id', validateRequest(animalValidationSchema, 'body'), authenticateToken,updateAnimalById);
 
 /**
  * @swagger
@@ -201,7 +192,7 @@ router.put('/:id', validateRequest(animalValidationSchema, 'body'), updateAnimal
  *         required: true
  *         description: Animal ID
  *       - in: header
- *         name: authorization
+ *         name: auth
  *         schema:
  *           type: string
  *         required: true
@@ -226,6 +217,6 @@ router.put('/:id', validateRequest(animalValidationSchema, 'body'), updateAnimal
  *             example:
  *               error: Error deleting animal
  */
-router.delete('/:id', deleteAnimalById);
+router.delete('/:id', authenticateToken, deleteAnimalById);
 
 export default router;

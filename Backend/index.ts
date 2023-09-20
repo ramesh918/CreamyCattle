@@ -2,7 +2,7 @@ import app from './src/app';
 import specs from './src/utils/swagger';
 import swaggerUi from 'swagger-ui-express';
 import connectToDatabase from './src/db';
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 4000;
 
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(specs));
 

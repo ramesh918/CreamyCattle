@@ -2,15 +2,17 @@ import express from 'express';
 import nameRoutes from './nameValidation';
 import roleRoutes from './role';
 import userRoutes from './users'
-import auth from './auth'
-import cattleShed from './cattleShed'
+import authRoutes from './auth'
+import cattleShedRoutes from './cattleShed'
+import animalRoutes from './animals'
+import imageRoutes from './imageUploadRoutes'
+
 
 const version1 = 'v1'
 
 const router = express.Router();
 
 const defaultRoutes = [
- 
   {
     path: `/${version1}/name`,
     route: nameRoutes,
@@ -25,14 +27,21 @@ const defaultRoutes = [
   },
   {
     path: `/${version1}/auth`,
-    route: auth,
+    route: authRoutes,
   },
   {
     path: `/${version1}/cattle-sheds`,
-    route: cattleShed,
+    route: cattleShedRoutes,
   },
-  
-  
+  {
+    path: `/${version1}/animals`,
+    route: animalRoutes
+  },
+  {
+    path: `/${version1}/image`,
+    route: imageRoutes
+  }
+
 ];
 
 
