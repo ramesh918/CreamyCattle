@@ -23,6 +23,8 @@ This web application serves as a comprehensive tool for monitoring cattle sheds 
         2. he/she can do CRUD operations on animals at his shed only
         3. he/she can enter milk production of each animal
         4. health reports and photos of animal
+        5. labor charges 
+        6. feed for animal and its charges
     d. super admin (client) permissions
         1. he/she can do everything.
 
