@@ -13,7 +13,7 @@ export async function createCattleShed(req: Request, res: Response) {
 
 export async function getAllCattleSheds(req: Request, res: Response) {
   try {
-   const cattleSheds = await CattleShedModel.find().select('_id city');
+   const cattleSheds = await CattleShedModel.find()
     res.json(cattleSheds);
   } catch (error) {
     res.status(500).json({ error: 'Error fetching cattle sheds' });

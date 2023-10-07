@@ -6,6 +6,7 @@ import authRoutes from './auth'
 import cattleShedRoutes from './cattleShed'
 import animalRoutes from './animals'
 import imageRoutes from './imageUploadRoutes'
+import managerRoutes from "./managers"
 
 
 const version1 = 'v1'
@@ -40,7 +41,13 @@ const defaultRoutes = [
   {
     path: `/${version1}/image`,
     route: imageRoutes
+  },
+  {
+    path: `/${version1}/managers`,
+    route: managerRoutes
   }
+
+  
 
 ];
 

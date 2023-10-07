@@ -11,13 +11,9 @@ export const UserInput = {
       example: "password123",
       description: "The password of the user",
     },
-    roles: {
-      type: "array",
-      items: {
-        type: "string",
-        example: "role_id_here",
-        description: "An array of role IDs associated with the user",
-      },
+    role: {
+      type: "string",
+      example: "role_id_here",
     },
     firstName: {
       type: "string",
@@ -73,13 +69,9 @@ export const User = {
       example: "john_doe",
       description: "The username of the user",
     },
-    roles: {
-      type: "array",
-      items: {
-        type: "string",
-        example: "role_id_here",
-        description: "An array of role IDs associated with the user",
-      },
+    role: {
+      type: "string",
+      example: "role_id_here",
     },
     firstName: {
       type: "string",

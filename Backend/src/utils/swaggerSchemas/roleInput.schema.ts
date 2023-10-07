@@ -6,11 +6,8 @@ export const RoleInput = {
             example: 'Administrator',
         },
         permissions: {
-            type: 'array',
-            items: {
-                type: 'string',
-            },
-            example: ['read', 'write'],
+            type: 'string',
+            example: '__ALL__',
         },
     },
 };  
@@ -27,11 +24,8 @@ export const Role = {
         example: 'Administrator',
       },
       permissions: {
-        type: 'array',
-        items: {
-          type: 'string',
-        },
-        example: ['read', 'write'],
+        type: 'string',
+        example: '__ALL__'
       },
     },
   };

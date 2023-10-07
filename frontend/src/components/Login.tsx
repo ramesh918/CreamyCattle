@@ -5,28 +5,34 @@ import Axios from 'axios';
 import { setToken } from '../store/authSlice';
 import { useNavigate } from 'react-router-dom';
 
+
 const Login: React.FC = () => {
   const [identifier, setIdentifier] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
+
   const dispatch = useDispatch();
   const navigate = useNavigate(); // Access the navigate function
+
 
   const handleLogin = async () => {
     try {
       if (identifier && password) {
-        const response = await Axios.post('http://localhost:3000/api/v1/auth/login', {
+        const response = await Axios.post('http://localhost:4000/api/v1/auth/login', {
           identifier,
           password,
         });
 
+
         // Assuming the response contains a token field
         const token = response.data.token;
 
+
         // Store the token in Redux
         dispatch(setToken(token));
+
 
         // Set isLoggedIn to true to trigger the redirect
         setIsLoggedIn(true);
@@ -41,8 +47,9 @@ const Login: React.FC = () => {
     }
   };
 
+
   return (
-    <Container maxWidth="xs" style={{backgroundColor:"#075b51", marginTop: "2%", padding: "2%", borderRadius:"5px", color: "white"}}>
+    <Container maxWidth="xs" style={{backgroundColor:"#075b51", marginTop: "2%", padding: "2%", borderRadius:"5px"}}>
       <Typography variant="h6" gutterBottom>
         Login
       </Typography>
@@ -51,20 +58,23 @@ const Login: React.FC = () => {
         <TextField
           label="Username or Email"
           fullWidth
-          margin="dense"
+          margin="normal"
           variant="outlined"
+          size = "small"
           value={identifier}
           onChange={(e) => setIdentifier(e.target.value)}
         />
         <TextField
           label="Password"
           fullWidth
-          margin="dense"
+          margin="normal"
           variant="outlined"
-          style={{color: "white"}}
           type="password"
+          size='small'
           value={password}
           onChange={(e) => setPassword(e.target.value)}
+
+
         />
         <Button
           variant="contained"
@@ -79,4 +89,8 @@ const Login: React.FC = () => {
   );
 };
 
+
 export default Login;
+
+
+

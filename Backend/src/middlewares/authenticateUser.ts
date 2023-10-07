@@ -12,7 +12,7 @@ export function authenticateToken(
 ) {
   const token = req.headers["auth"];
 
- 
+  console.log(token)
   if (!token) {
     return res.status(401).send("Unauthorized");
   }

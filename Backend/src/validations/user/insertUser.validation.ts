@@ -1,4 +1,5 @@
 import Joi from 'joi';
+import RoleModel from '../../models/Role'; // Import your RoleModel
 
 export const userValidationSchema = Joi.object({
   username: Joi.string().required().messages({
@@ -7,10 +8,23 @@ export const userValidationSchema = Joi.object({
   password: Joi.string().required().messages({
     'any.required': 'Password is required.',
   }),
-  roles: Joi.array().items(Joi.string().regex(/^[0-9a-fA-F]{24}$/)).messages({
-    'array.base': 'Roles must be an array of role IDs.',
-    'string.pattern.base': 'Invalid role ID format.',
-  }),
+  role: Joi.string()
+    .regex(/^[0-9a-fA-F]{24}$/)
+    .required()
+    .custom(async (value, helpers) => {
+      // Check if the role ID exists in the "Role" collection in MongoDB
+      const roleExists = await RoleModel.exists({ _id: value });
+
+      if (!roleExists) {
+        return helpers.error('any.custom', { messages: { 'custom.roleNotFound': 'Role not found in the database.' } });
+      }
+
+      return value;
+    })
+    .messages({
+      'any.required': 'Role ID is required.',
+      'string.pattern.base': 'Invalid role ID format.',
+    }),
   firstName: Joi.string().required().messages({
     'any.required': 'First name is required.',
   }),
@@ -27,5 +41,3 @@ export const userValidationSchema = Joi.object({
   adharImageURL: Joi.string().allow('').optional(),
   profilePic: Joi.string().allow('').optional(),
 });
-
-
